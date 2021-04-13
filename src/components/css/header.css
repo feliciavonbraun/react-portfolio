@@ -1,0 +1,52 @@
+header {
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 0;
+    letter-spacing: 10px;
+    padding-top: 10rem;
+}
+
+hr.line {
+    border: 2px solid var(--clr-red);
+    width: 20%;
+    margin: auto;
+    background: linear-gradient(to right, transparent, #673030, transparent);
+    /* margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0; */
+}
+
+.myTitle {
+    font-size: 1.2rem;
+    margin: 0;
+    line-height: 0;
+    letter-spacing: 10px;
+}
+
+@media (max-width: 950px) {
+
+    h1 {
+        font-size: 3rem;
+        padding: 1rem;
+        padding-top: 6rem;
+        text-align: center;
+    }
+    
+    .myTitle {
+        letter-spacing: 4px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        /* margin-bottom: 0; */
+    }
+}

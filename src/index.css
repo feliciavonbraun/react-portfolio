@@ -1,13 +1,68 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} */
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+} */
+
+:root {
+  --bg-clr: #373737;
+  --text-clr: #E7CEE3;
+  --object-clr: #B1A4A5;
+  --bubble-clr1: #777777;
+  --bubble-clr2: #FFE2D5;
+  --bubble-clr3: #FFDDB7; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Saira Condensed', sans-serif;
+}
+
+body {
+  margin: 0; 
+  background: var(--bg-clr);
+}
+
+h1, h2 {
+  letter-spacing: 3px;
+  color: var(--text-clr);
+  font-size: 2rem;
+}
+
+/* .projectArea, .aboutArea, .skillsArea, .contactArea {
+  opacity: 0; */
+  /* transition: opacity 3s; */
+  /* transition: opacity 2s ease-in-out;
+} */
+
+/* REUSABLE CLASSES  */
+.flex {
+  display: flex;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.column {
+  flex-direction: column;
+}
+.row {
+  flex-direction: row;
+}
+.flexEnd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

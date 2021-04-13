@@ -1,5 +1,5 @@
 import Header from "./header";
-import Main from "./main";
+import Main from "./main/main";
 import Footer from "./footer";
 
 function Layout() {

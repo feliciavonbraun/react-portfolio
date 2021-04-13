@@ -12,6 +12,7 @@ interface AboutDetail {
     bigImage: string;
     samllImage: string,
     text: string;
+    class?: string;
 }
 
 function About() {
@@ -20,7 +21,8 @@ function About() {
         {
             bigImage: malta,
             samllImage: maltaS,
-            text: 'I’ve been living and working in Malta for 1.5 years which was a great experience. I learned so much and made friends for life.'
+            text: 'I’ve been living and working in Malta for 1.5 years which was a great experience. I learned so much and made friends for life.',
+            class: 'flexEnd'
         },{
             bigImage: traveling,
             samllImage: travelingS,
@@ -28,7 +30,8 @@ function About() {
         },{
             bigImage: nature,
             samllImage: natureS,
-            text: 'When lack of inspiration I always turn to nature with my family and friends. There is no such thing as watching every element and all the lives of nature.'
+            text: 'When lack of inspiration I always turn to nature with my family and friends. There is no such thing as watching every element and all the lives of nature.',
+            class: 'flexEnd'
         },{
             bigImage: temp,
             samllImage: tempS,
@@ -37,13 +40,13 @@ function About() {
     ];
 
     return (
-        <div>
+        <div id="about" className="aboutArea flex">
             <h2 className="aboutTitle">About</h2>
             <div>
                 {aboutDetails.map((aboutDetail, index) =>
                     <div key={index}>
                         {/* alla har klassnamn flexEnd nu när bara 2 ska ha det  */}
-                        <div className="flexEnd" >
+                        <div className={aboutDetail.class}>
                             {/* all har klassnamn about1 nu  */}
                             <div className="about1 card">
                                 <img src={aboutDetail.samllImage} alt="Card Back" width="100%" height="100%" />

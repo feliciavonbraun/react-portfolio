@@ -1,10 +1,13 @@
+import './css/header.css'
+import './css/floatingNav.css'
+// import MenuIcon from '@material-ui/icons/Menu';
 
 function Header() {
     return (
         <div>
             <div id="circularMenu" className="circular-menu">
-                {/* <a className="floating-btn" onclick="document.getElementById('circularMenu').classNameList.toggle('active');">
-                    <i className="fa fa-plus material-icons">menu</i>
+                {/* <a className="floating-btn" onClick="document.getElementById('circularMenu').classNameList.toggle('active');">
+                    <i className="fa fa-plus material-icons"><MenuIcon/></i>
                 </a> */}
 
                 <menu className="items-wrapper">
