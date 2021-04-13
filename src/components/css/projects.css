@@ -1,0 +1,66 @@
+.projectArea {
+    flex-wrap: wrap;
+    margin: 0 3rem;
+    justify-content: space-between;
+}
+
+.projectTitle {
+    background: var(--object-clr);
+    color: var(--text-clr);
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding: 16px 32px;
+    border-radius: 0.1rem;
+}
+
+.projectTitle > a:hover, a:any-link{
+    text-decoration: none;
+}
+
+.projectContainer {
+    position: relative;
+    width: 30%;
+    padding: 1rem;
+}
+
+.computerPicture {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    /* height: auto; */
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 0.2rem;
+}
+
+.hoverEffects {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    opacity: 0;
+    transition: .5s ease;
+    transform: translate(-50%, -50%); 
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;    
+}
+
+.projectContainer:hover .computerPicture {
+    opacity: 0.3;
+}
+.projectContainer:hover .hoverEffects {
+    opacity: 1;
+}
+
+@media (max-width: 950px) {
+    .projectArea {
+        margin: 0;
+    }
+
+    .projectContainer {
+        width: 50%;
+    }
+
+    .projectTitle {
+        font-size: small;
+    }
+}
