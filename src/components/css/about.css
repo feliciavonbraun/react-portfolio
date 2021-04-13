@@ -20,10 +20,10 @@
     /* display: inline-block; */
 }
 
-.about1, .about3 {
+.aboutRight{
     margin-right: 3rem;
 }
-.about2, .about4 {
+.aboutLeft{
     margin-left: 3rem;   
 }
 

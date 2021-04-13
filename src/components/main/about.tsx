@@ -10,9 +10,10 @@ import '../css/about.css'
 
 interface AboutDetail {
     bigImage: string;
-    samllImage: string,
+    samllImage: string;
     text: string;
-    class?: string;
+    flex?: string;
+    margin: string; 
 }
 
 function About() {
@@ -22,20 +23,24 @@ function About() {
             bigImage: malta,
             samllImage: maltaS,
             text: 'I’ve been living and working in Malta for 1.5 years which was a great experience. I learned so much and made friends for life.',
-            class: 'flexEnd'
+            flex: 'flexEnd',
+            margin: 'aboutRight card'
         },{
             bigImage: traveling,
             samllImage: travelingS,
-            text: 'Sounds like a cliche to say I love traveling but so be it. Together with my backpack and friends I have been traveling around the world. I love exploring every different area with people and nature. Everything from jumping out of a plane to diving down with the fishes.'
+            text: 'Sounds like a cliche to say I love traveling but so be it. Together with my backpack and friends I have been traveling around the world. I love exploring every different area with people and nature. Everything from jumping out of a plane to diving down with the fishes.',
+            margin: 'aboutLeft card'
         },{
             bigImage: nature,
             samllImage: natureS,
             text: 'When lack of inspiration I always turn to nature with my family and friends. There is no such thing as watching every element and all the lives of nature.',
-            class: 'flexEnd'
+            flex: 'flexEnd',
+            margin: 'aboutRight card'
         },{
             bigImage: temp,
             samllImage: tempS,
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blandi'
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blandi',
+            margin: 'aboutLeft card'
         },
     ];
 
@@ -45,10 +50,8 @@ function About() {
             <div>
                 {aboutDetails.map((aboutDetail, index) =>
                     <div key={index}>
-                        {/* alla har klassnamn flexEnd nu när bara 2 ska ha det  */}
-                        <div className={aboutDetail.class}>
-                            {/* all har klassnamn about1 nu  */}
-                            <div className="about1 card">
+                        <div className={aboutDetail.flex}>
+                            <div className={aboutDetail.margin}>
                                 <img src={aboutDetail.samllImage} alt="Card Back" width="100%" height="100%" />
                                 <div className="img-top">
                                     <img src={aboutDetail.bigImage} alt="Card Front" width="100%" />

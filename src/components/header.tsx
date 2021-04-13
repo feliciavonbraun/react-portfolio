@@ -4,7 +4,7 @@ import './css/floatingNav.css'
 
 function Header() {
     return (
-        <div>
+        <header >
             <div id="circularMenu" className="circular-menu">
                 {/* <a className="floating-btn" onClick="document.getElementById('circularMenu').classNameList.toggle('active');">
                     <i className="fa fa-plus material-icons"><MenuIcon/></i>
@@ -26,7 +26,7 @@ function Header() {
                     <hr className="line" />
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 export default Header;

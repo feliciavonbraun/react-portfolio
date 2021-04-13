@@ -5,12 +5,12 @@ import Skills from './skills';
 
 function Main() {
     return (
-        <div>
+        <main>
             <Projects/>
             <About/>
             <Skills/>
             <Contact/>
-        </div>
+        </main>
     )
 }
 export default Main; 
