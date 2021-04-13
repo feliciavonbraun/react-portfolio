@@ -60,7 +60,7 @@ function Skills() {
 
                 {imgDetails.map((imgDetail, index) =>
                     <div key={index} className="skill">
-                        <img src={imgDetail.img} width={imgDetail.img} alt={imgDetail.alt} />
+                        <img src={imgDetail.img} width={imgDetail.width} alt={imgDetail.alt} />
                     </div>
                 )}
             </div>
