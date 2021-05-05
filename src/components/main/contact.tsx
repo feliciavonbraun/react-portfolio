@@ -1,13 +1,13 @@
-// import CV from '../assets/feliciavonbraunCV'
-import cvImg from '../assets/logos/cvicon.png'
-import githubLogo from '../assets/logos/github.png'
-import linkedinLogo from '../assets/logos/linkedin.png'
-import maillogo from '../assets/logos/maillogo.png'
-import '../css/contact.css'
+import CVLink from '../assets/feliciavonbraunCV.pdf';
+import cvImg from '../assets/logos/cvicon.png';
+import githubLogo from '../assets/logos/github.png';
+import linkedinLogo from '../assets/logos/linkedin.png';
+import maillogo from '../assets/logos/maillogo.png';
+import '../css/contact.css';
 
 interface Circle {
     class: string,
-    href?: string, 
+    href?: any, 
     img?: string,
     alt?: string, 
     height?: string
@@ -19,7 +19,7 @@ function Contact() {
     const circles: Circle[] = [
         {
             class: 'circle1 flex center',
-            // href: CV, 
+            href: CVLink, 
             img: cvImg,
             alt: 'CV', 
             height: '2.8rem'
