@@ -1,14 +1,22 @@
 import './css/header.css'
-import './css/floatingNav.css'
+// import './css/floatingNav.css'
 // import MenuIcon from '@material-ui/icons/Menu';
+// import { useState } from 'react';
 
 function Header() {
+
+    // const [activeNav, setActiveNav] = useState();
+
     return (
         <header >
-            <div id="circularMenu" className="circular-menu">
-                {/* <a className="floating-btn" onClick="document.getElementById('circularMenu').classNameList.toggle('active');">
+            {/* <div id="circularMenu" className="circular-menu">
+                <a className="floating-btn" onClick="document.getElementById('circularMenu').classNameList.toggle('active');">
                     <i className="fa fa-plus material-icons"><MenuIcon/></i>
-                </a> */}
+                </a>
+
+                <a href={activeNav} onClick={ setActiveNav}>
+                    <i className="fa fa-plus material-icons"> <MenuIcon/> </i>
+                </a>
 
                 <menu className="items-wrapper">
                     <a href="#projects" className="menu-item fa">Projects</a>
@@ -16,7 +24,7 @@ function Header() {
                     <a href="#skills" className="menu-item fa ">Skills</a>
                     <a href="#contact" className="menu-item fa fa-linkedin">Contact</a>
                 </menu>
-            </div>
+            </div> */}
 
             <div>
                 <h1 className="flex center">FELICIA VON BRAUN </h1>
@@ -27,6 +35,6 @@ function Header() {
                 </div>
             </div>
         </header>
-    )
-}
+    );
+};
 export default Header;
