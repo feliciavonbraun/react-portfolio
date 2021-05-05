@@ -51,6 +51,10 @@
     opacity: 1;
 }
 
+.imgZoom:hover {
+    transform: scale(1.04);
+}
+
 @media (max-width: 950px) {
     .projectArea {
         margin: 0;

@@ -10,7 +10,8 @@ interface Project {
     titel: string;
     src: string;
     alt: string;
-    href: string;
+    demoLink: string;
+    repoLink: string;
 }
 
 function Projects() {
@@ -19,32 +20,38 @@ function Projects() {
             titel: 'Björk',
             src: bjorkImg,
             alt: 'Balla:Ur',
-            href: 'https://bjorkinterior.netlify.app/'
+            demoLink: 'https://bjorkinterior.netlify.app/',
+            repoLink: 'https://github.com/feliciavonbraun/bjork'
         }, {
             titel: 'Balla:Ur',
             src: ballaUrImg,
             alt: 'Björk',
-            href: 'https://balla-ur-online.netlify.app/'
+            demoLink: 'https://balla-ur-online.netlify.app/',
+            repoLink: 'https://github.com/feliciavonbraun/Ball-game'
         }, {
             titel: 'RapiDapi',
             src: rapiDapiImg,
             alt: 'RapiDapi',
-            href: 'https://rapidapiapp.netlify.app/'
+            demoLink: 'https://rapidapiapp.netlify.app/',
+            repoLink: 'https://github.com/feliciavonbraun/rapidapi-app'
         }, {
             titel: 'Higher or Lower',
             src: quizappImg,
             alt: 'Higher or Lower',
-            href: 'https://higerorlower.netlify.app/'
+            demoLink: 'https://higerorlower.netlify.app/',
+            repoLink: 'https://github.com/feliciavonbraun/quiz-app'
         }, {
             titel: 'Calendar',
             src: calendarImg,
             alt: 'Calendar',
-            href: 'https://feliciavonbraun.github.io/calendar/'
+            demoLink: 'https://feliciavonbraun.github.io/calendar/',
+            repoLink: 'https://github.com/feliciavonbraun/calendar'
         }, {
             titel: 'Text Based Game',
             src: flightgameImg,
             alt: 'Text Based Game',
-            href: 'https://feliciavonbraun.github.io/javascript-game/'
+            demoLink: 'https://feliciavonbraun.github.io/javascript-game/',
+            repoLink: 'https://github.com/feliciavonbraun/javascript-game'
         },
     ];
 
@@ -57,12 +64,17 @@ function Projects() {
                     <div key={index} className="projectContainer">
                         <img className="computerPicture" src={project.src} alt={project.alt} />
                         <div className="hoverEffects">
-                            <a href={project.href} target="_blank" rel="noreferrer"><p className="projectTitle">{project.titel}</p></a>
+                            <a href={project.demoLink} target="_blank" rel="noreferrer" >
+                                <p className="projectTitle imgZoom">{project.titel} </p>
+                            </a>
+                            <a href={project.repoLink} target="_blank" rel="noreferrer">
+                                <p className="projectTitle imgZoom">Repo</p>
+                            </a>
                         </div>
                     </div>
                 )}
             </div>
         </div>
-    )
-}
+    );
+};
 export default Projects;
