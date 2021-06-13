@@ -1,9 +1,10 @@
-import htmlLogo from '../assets/logos/html.png'
-import cssLogo from '../assets/logos/css.png'
-import jsLogo from '../assets/logos/js.png'
-import tsLogo from '../assets/logos/ts-svart.png'
-import reactLogo from '../assets/logos/react.png'
+import htmlLogo from '../../assets/logos/html.png'
+import cssLogo from '../../assets/logos/css.png'
+import jsLogo from '../../assets/logos/js.png'
+import tsLogo from '../../assets/logos/ts-svart.png'
+import reactLogo from '../../assets/logos/react.png'
 import '../css/skills.css'
+// import { CSSProperties } from 'react'
 
 interface ImgDetail {
     img: string;
@@ -68,3 +69,36 @@ function Skills() {
     )
 }
 export default Skills;
+
+// fixa conditional rendering på vilken heder som ska visas,
+// ta in mediaquery componenten från chatalot
+
+// const skillsArea: CSSProperties = {
+//     padding: '1rem 3rem',
+//     justifyContent: 'space-between',
+//     alignItems: 'center',
+//     width: '100%',
+//     flexWrap: 'wrap',
+// };
+
+// const skillsLetter: CSSProperties = {
+//     margin: 0,
+//     lineHeight: 1,
+// };
+
+// const bigSkillsHeader: CSSProperties ={
+//     display: 'block',
+// };
+// const smallSkillsHeader: CSSProperties ={
+//     display: 'none',
+// };
+
+// const skill: CSSProperties = {
+//     background: 'var(--object-clr)',
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     borderRadius: '.5rem',
+//     width: '7rem',
+//     height: '7rem',
+// };

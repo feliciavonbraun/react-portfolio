@@ -1,12 +1,12 @@
-import bjorkImg from '../assets/projects/bjork.png';
-import ballaUrImg from '../assets/projects/ballaur.png';
-import rapiDapiImg from '../assets/projects/rapidapi.png';
-import quizappImg from '../assets/projects/quizapp.png';
-import calendarImg from '../assets/projects/calendar.png';
-import flightgameImg from '../assets/projects/flightgame.png';
-import rainbowLandImg from '../assets/projects/rainbowLand.png';
-import chatALotImg from '../assets/projects/chatAlot.png';
-import fashionStoreImg from '../assets/projects/fashionStore.png';
+import bjorkImg from '../../assets/projects/bjork.png';
+import ballaUrImg from '../../assets/projects/ballaur.png';
+import rapiDapiImg from '../../assets/projects/rapidapi.png';
+import quizappImg from '../../assets/projects/quizapp.png';
+import calendarImg from '../../assets/projects/calendar.png';
+import flightgameImg from '../../assets/projects/flightgame.png';
+import rainbowLandImg from '../../assets/projects/rainbowLand.png';
+import chatALotImg from '../../assets/projects/chatAlot.png';
+import fashionStoreImg from '../../assets/projects/fashionStore.png';
 import '../css/projects.css';
 
 interface Project {
