@@ -1,12 +1,12 @@
-import malta from '../../assets/photos/malta.jpeg'
-import maltaS from '../../assets/photos/maltaS.jpeg'
-import traveling from '../../assets/photos/traveling.jpeg'
-import travelingS from '../../assets/photos/travelingS.jpeg'
-import nature from '../../assets/photos/nature.jpg'
-import natureS from '../../assets/photos/natureS.jpg'
-import temp from '../../assets/photos/temp.jpeg'
-import tempS from '../../assets/photos/tempS.jpeg'
-import '../css/about.css'
+import malta from '../../assets/photos/malta.jpeg';
+import maltaS from '../../assets/photos/maltaS.jpeg';
+import traveling from '../../assets/photos/traveling.jpeg';
+import travelingS from '../../assets/photos/travelingS.jpeg';
+import nature from '../../assets/photos/nature.jpg';
+import natureS from '../../assets/photos/natureS.jpg';
+import gadget from '../../assets/photos/gadgets.jpeg';
+import gadgetS from '../../assets/photos/gadgetsS.jpeg';
+import '../css/about.css';
 
 interface AboutDetail {
     bigImage: string;
@@ -14,14 +14,14 @@ interface AboutDetail {
     text: string;
     flex?: string;
     margin: string; 
-}
+};
 
-function About() {
+export default function About() {
 
     const aboutDetails: AboutDetail[] = [
         {
-            bigImage: temp,
-            samllImage: tempS,
+            bigImage: gadget,
+            samllImage: gadgetS,
             text: 'I am an aspiring frontend developer studying at Medieinstitutet in Gothenburg. I will graduate in may 2022. ',
             flex: 'flexEnd',
             margin: 'aboutRight card'
@@ -67,5 +67,4 @@ function About() {
 
         </div>
     )
-}
-export default About;
+};

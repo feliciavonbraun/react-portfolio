@@ -1,7 +1,12 @@
+import { Box } from '@material-ui/core';
+import CopyrightIcon from '@material-ui/icons/Copyright';
 
-function Footer() {
+export default function Footer() {
     return (
-        <footer></footer>
+        <footer>
+            <Box display='flex' justifyContent='center'>
+                <CopyrightIcon/>  2021 Felicia von Braun
+            </Box>
+        </footer>
     )
 }
-export default Footer; 
