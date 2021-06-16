@@ -1,9 +1,10 @@
-import htmlLogo from '../../assets/logos/html.png'
-import cssLogo from '../../assets/logos/css.png'
-import jsLogo from '../../assets/logos/js.png'
-import tsLogo from '../../assets/logos/ts-svart.png'
-import reactLogo from '../../assets/logos/react.png'
-import '../css/skills.css'
+import htmlLogo from '../../assets/logos/html.png';
+import cssLogo from '../../assets/logos/css.png';
+import jsLogo from '../../assets/logos/js.png';
+import tsLogo from '../../assets/logos/ts-svart.png';
+import reactLogo from '../../assets/logos/react.png';
+import mongoLogo from '../../assets/logos/mongodb3.png';
+import '../css/skills.css';
 // import { CSSProperties } from 'react'
 
 interface ImgDetail {
@@ -23,7 +24,7 @@ function Skills() {
         }, {
             img: cssLogo,
             // denna ska ju va i % vart ska vi sätta det??
-            width: '90%',
+            width: '85%',
             alt: 'CSS'
         }, {
             img: jsLogo,
@@ -39,7 +40,12 @@ function Skills() {
             img: reactLogo,
             // denna ska ju va i % vart ska vi sätta det??
             width: '95%',
-            alt: 'react'
+            alt: 'React'
+        }, {
+            img: mongoLogo,
+            // denna ska ju va i % vart ska vi sätta det??
+            width: '45%',
+            alt: 'MongoDB'
         },
     ]
 

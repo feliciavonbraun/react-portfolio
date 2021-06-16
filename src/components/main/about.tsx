@@ -22,7 +22,7 @@ export default function About() {
         {
             bigImage: gadget,
             samllImage: gadgetS,
-            text: 'I am an aspiring frontend developer studying at Medieinstitutet in Gothenburg. I will graduate in may 2022. ',
+            text: 'I am an aspiring frontend developer studying at Medieinstitutet in Gothenburg and I will graduate in may 2022. Ever since I can remember all kinds of digital gadgets have been an interest of mine, so if felt natural studying something that involved computers. And I’ve found my place.',
             flex: 'flexEnd',
             margin: 'aboutRight card'
         },{

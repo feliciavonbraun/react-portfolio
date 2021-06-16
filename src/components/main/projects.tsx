@@ -85,7 +85,7 @@ function Projects() {
                     <div key={index} className="projectContainer">
                         <img className="computerPicture" src={project.src} alt={project.alt} />
                         <div className="hoverEffects">
-                            {project.titel &&
+                            {project.demoLink &&
                                 <a href={project.demoLink} target="_blank" rel="noreferrer" >
                                     <p className="projectTitle imgZoom">{project.titel} </p>
                                 </a>  
