@@ -28,7 +28,7 @@
     height: 7rem;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 985px) {
     .skillsArea {
         padding: 1rem;
     }
