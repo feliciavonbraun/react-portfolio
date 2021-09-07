@@ -6,6 +6,7 @@ import reactLogo from '../../assets/logos/react.png';
 import mongoLogo from '../../assets/logos/mongodb3.png';
 import '../css/skills.css';
 // import { CSSProperties } from 'react'
+import { useMediaQuery } from '../mediaQuery';
 
 interface ImgDetail {
     img: string;
@@ -14,6 +15,8 @@ interface ImgDetail {
 }
 
 function Skills() {
+
+    let mobileView = useMediaQuery('(max-width: 985px)');
 
     const imgDetails: ImgDetail[] = [
         {
@@ -53,7 +56,10 @@ function Skills() {
         <div>
             <div>
                 <h2 className="smallSkillsHeader center">Skills</h2>
+                {mobileView && <hr/> }
             </div>
+
+            
             <div id="skills" className="skillsArea flex">
 
                 <div className="bigSkillsHeader flex column">
