@@ -17,6 +17,23 @@
     text-decoration: none;
 }
 
+.smallScreenButtonDiv {
+    display: flex;
+    justify-content: space-around;
+    background: var(--object-clr);
+    margin-top: -0.1rem;
+    border-radius: 0.1rem;
+}
+
+.smallScreenButtons {
+    color: var(--text-clr);
+    margin: .3rem .6rem;
+}
+
+.smallScreenTitel {
+    margin-bottom: 0;
+}
+
 .projectContainer {
     position: relative;
     width: 30%;
@@ -66,5 +83,9 @@
 
     .projectTitle {
         font-size: small;
+    }
+
+    .projectContainer:hover .computerPicture {
+        opacity: 1;
     }
 }

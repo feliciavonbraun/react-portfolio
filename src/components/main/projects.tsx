@@ -8,6 +8,7 @@ import rainbowLandImg from '../../assets/projects/rainbowLand.png';
 import chatALotImg from '../../assets/projects/chatAlot.png';
 import fashionStoreImg from '../../assets/projects/fashionStore.png';
 import '../css/projects.css';
+import { useMediaQuery } from "../mediaQuery";
 
 interface Project {
     titel?: string;
@@ -18,6 +19,9 @@ interface Project {
 }
 
 function Projects() {
+
+    let mobileView = useMediaQuery('(max-width: 700px)');
+
     const projects: Project[] = [
         {
             // titel: 'Fashion Store',
@@ -25,19 +29,19 @@ function Projects() {
             alt: 'Fashion Store',
             // demoLink: '',
             repoLink: 'https://github.com/feliciavonbraun/fashion-store'
-        },{
+        }, {
             // titel: 'ChatALot',
             src: chatALotImg,
             alt: 'ChatALot',
             // demoLink: '',
             repoLink: 'https://github.com/feliciavonbraun/chat-room'
-        },{
+        }, {
             // titel: 'Rainbow Land',
             src: rainbowLandImg,
             alt: 'Rainbow Land',
             // demoLink: '',
             repoLink: 'https://github.com/feliciavonbraun/rainbow-land'
-        },{
+        }, {
             titel: 'Björk',
             src: bjorkImg,
             alt: 'Björk',
@@ -68,7 +72,7 @@ function Projects() {
             demoLink: 'https://feliciavonbraun.github.io/calendar/',
             repoLink: 'https://github.com/feliciavonbraun/calendar'
         }, {
-            titel: 'Text Based Game',
+            titel: 'Text Game',
             src: flightgameImg,
             alt: 'Text Based Game',
             demoLink: 'https://feliciavonbraun.github.io/javascript-game/',
@@ -78,22 +82,38 @@ function Projects() {
 
     return (
         <div>
-            <h2 id="projects" className="flex center">Projects</h2>
+            <h2 id="projects" className="flex center smallScreenTitel">Projects</h2>
+            <hr />
 
             <div className="projectArea flex">
                 {projects.map((project, index) =>
                     <div key={index} className="projectContainer">
                         <img className="computerPicture" src={project.src} alt={project.alt} />
-                        <div className="hoverEffects">
-                            {project.demoLink &&
-                                <a href={project.demoLink} target="_blank" rel="noreferrer" >
-                                    <p className="projectTitle imgZoom">{project.titel} </p>
-                                </a>  
-                            }
-                            <a href={project.repoLink} target="_blank" rel="noreferrer">
-                                <p className="projectTitle imgZoom">Repo</p>
-                            </a>
-                        </div>
+
+                        {/* Titel buttons depending on screensize */}
+                        {mobileView ?
+                            <div className='smallScreenButtonDiv'>
+                                {project.demoLink &&
+                                    <a href={project.demoLink} target="_blank" rel="noreferrer" >
+                                        <p className="smallScreenButtons imgZoom">{project.titel} </p>
+                                    </a>
+                                }
+                                <a href={project.repoLink} target="_blank" rel="noreferrer">
+                                    <p className="smallScreenButtons imgZoom ">Repo</p>
+                                </a>
+                            </div>
+                            :
+                            <div className="hoverEffects">
+                                {project.demoLink &&
+                                    <a href={project.demoLink} target="_blank" rel="noreferrer" >
+                                        <p className="projectTitle imgZoom">{project.titel} </p>
+                                    </a>
+                                }
+                                <a href={project.repoLink} target="_blank" rel="noreferrer">
+                                    <p className="projectTitle imgZoom">Repo</p>
+                                </a>
+                            </div>
+                        }
                     </div>
                 )}
             </div>

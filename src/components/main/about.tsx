@@ -7,6 +7,7 @@ import natureS from '../../assets/photos/natureS.jpg';
 import gadget from '../../assets/photos/gadgets.jpeg';
 import gadgetS from '../../assets/photos/gadgetsS.jpeg';
 import '../css/about.css';
+import { useMediaQuery } from "../mediaQuery";
 
 interface AboutDetail {
     bigImage: string;
@@ -17,6 +18,8 @@ interface AboutDetail {
 };
 
 export default function About() {
+
+    let mobileView = useMediaQuery('(max-width: 950px)');
 
     const aboutDetails: AboutDetail[] = [
         {
@@ -47,6 +50,8 @@ export default function About() {
     return (
         <div id="about" className="aboutArea flex">
             <h2 className="aboutTitle">About</h2>
+            {mobileView && <hr /> }
+
             <div>
                 {aboutDetails.map((aboutDetail, index) =>
                     <div key={index}>

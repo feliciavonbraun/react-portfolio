@@ -42,6 +42,14 @@ h1, h2 {
   font-size: 2rem;
 }
 
+hr {
+  background: var(--bubble-clr2);
+  height: .03rem;
+  width: 60%;
+  border: none;
+  margin-top: 0;
+}
+
 /* .projectArea, .aboutArea, .skillsArea, .contactArea {
   opacity: 0; */
   /* transition: opacity 3s; */
