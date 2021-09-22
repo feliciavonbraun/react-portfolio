@@ -1,40 +1,48 @@
 import './css/header.css'
-// import './css/floatingNav.css'
-// import MenuIcon from '@material-ui/icons/Menu';
-// import { useState } from 'react';
+import { Box } from '@material-ui/core';
+import { CSSProperties } from '@material-ui/styles';
+import { useMediaQuery } from './mediaQuery';
 
 function Header() {
 
-    // const [activeNav, setActiveNav] = useState();
+    const mobileView = useMediaQuery('(max-width: 950px)')
 
     return (
-        <header >
-            {/* <div id="circularMenu" className="circular-menu">
-                <a className="floating-btn" onClick="document.getElementById('circularMenu').classNameList.toggle('active');">
-                    <i className="fa fa-plus material-icons"><MenuIcon/></i>
-                </a>
-
-                <a href={activeNav} onClick={ setActiveNav}>
-                    <i className="fa fa-plus material-icons"> <MenuIcon/> </i>
-                </a>
-
-                <menu className="items-wrapper">
-                    <a href="#projects" className="menu-item fa">Projects</a>
-                    <a href="#about" className="menu-item fa">About</a>
-                    <a href="#skills" className="menu-item fa ">Skills</a>
-                    <a href="#contact" className="menu-item fa fa-linkedin">Contact</a>
-                </menu>
-            </div> */}
-
-            <div>
-                <h1 className="flex center">FELICIA VON BRAUN </h1>
-                <div className="flex center">
-                    <hr className="line" />
-                    <h2 className="myTitle">ASPIRING FRONTEND DEVELOPER</h2>
-                    <hr className="line" />
-                </div>
-            </div>
-        </header>
+        <header style={{ margin: '0', height: '100vh' }}>
+            <Box>
+                <h1 className="flex center" style={mobileView ? h1Mobile : h1} >FELICIA VON BRAUN </h1>
+                <Box className="flex center">
+                    <h2 className="myTitleMobile" style={mobileView ? myTitleMobile : myTitle}>ASPIRING FRONTEND DEVELOPER</h2>
+                </Box>
+            </Box>
+        </header >
     );
 };
 export default Header;
+const h1: CSSProperties = {
+    fontSize: '5rem',
+    margin: '0',
+    letterSpacing: '10px',
+    paddingTop: '10rem',
+};
+
+const myTitle: CSSProperties = {
+    fontSize: '1.2rem',
+    margin: '0',
+    lineHeight: '0',
+    letterSpacing: '10px',
+};
+
+// MOBILE VIEW
+
+const h1Mobile: CSSProperties = {
+    ...h1,
+    fontSize: '3rem',
+    paddingTop: '6rem, 1rem, 1rem, 1rem',
+    textAlign: 'center',
+};
+
+const myTitleMobile: CSSProperties = {
+    ...myTitle,
+    letterSpacing: '4px',
+};
