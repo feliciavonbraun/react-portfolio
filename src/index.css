@@ -13,12 +13,19 @@
 } */
 
 :root {
-  --bg-clr: #373737;
-  --text-clr: #E7CEE3;
-  --object-clr: #B1A4A5;
-  --bubble-clr1: #777777;
-  --bubble-clr2: #FFE2D5;
-  --bubble-clr3: #FFDDB7; 
+  --clr-black: #373737;
+  --clr-light-gray: #b1a4a5;
+  --clr-dark-gray: #777777;
+  --clr-lavender: #e7cee3;
+  --clr-peach: #ffe2d5;
+  --clr-yellow: #ffddb7;
+
+  --bg-clr: var(--clr-black);
+  --text-clr: var(--clr-lavender);
+  --object-clr: var(--clr-light-gray);
+  --bubble-clr1: var(--clr-dark-gray);
+  --bubble-clr2: var(--clr-peach);
+  --bubble-clr3: var(--clr-yellow);
 }
 
 * {
@@ -27,16 +34,17 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Saira Condensed', sans-serif;
+  font-family: "Saira Condensed", sans-serif;
 }
 
 body {
-  margin: 0; 
+  margin: 0;
   background: var(--bg-clr);
-  font-family: 'Saira Condensed', sans-serif;
+  font-family: "Saira Condensed", sans-serif;
 }
 
-h1, h2 {
+h1,
+h2 {
   letter-spacing: 3px;
   color: var(--text-clr);
   font-size: 2rem;
@@ -44,7 +52,7 @@ h1, h2 {
 
 hr {
   background: var(--bubble-clr2);
-  height: .03rem;
+  height: 0.03rem;
   width: 60%;
   border: none;
   margin-top: 0;
@@ -52,8 +60,8 @@ hr {
 
 /* .projectArea, .aboutArea, .skillsArea, .contactArea {
   opacity: 0; */
-  /* transition: opacity 3s; */
-  /* transition: opacity 2s ease-in-out;
+/* transition: opacity 3s; */
+/* transition: opacity 2s ease-in-out;
 } */
 
 /* REUSABLE CLASSES  */
