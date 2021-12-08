@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import { AboutDetail } from "./about";
+import { AboutDetail } from "../content/aboutInfo";
 
 interface Props {
   aboutDetail: AboutDetail;
