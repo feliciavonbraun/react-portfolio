@@ -60,7 +60,7 @@ const projects: Project[] = [
     repoLink: "https://github.com/feliciavonbraun/rapidapi-app",
   },
   {
-    titel: "Higher or Lower",
+    titel: "High or Low",
     src: quizappImg,
     alt: "Higher or Lower",
     demoLink: "https://higerorlower.netlify.app/",
