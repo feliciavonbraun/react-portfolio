@@ -3,7 +3,7 @@ import AboutCard from "./aboutCard";
 import styled from "styled-components";
 import aboutDetails from "../content/aboutInfo";
 
-export default function About2() {
+function About() {
   let mobileView = useMediaQuery("(max-width: 950px)");
 
   return (
@@ -19,6 +19,7 @@ export default function About2() {
     </StyledAboutArea>
   );
 }
+export default About;
 
 const StyledAboutArea = styled.div`
   display: flex;

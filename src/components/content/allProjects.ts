@@ -3,10 +3,11 @@ import ballaUrImg from "../../assets/projects/ballaur.png";
 import rapiDapiImg from "../../assets/projects/rapidapi.png";
 import quizappImg from "../../assets/projects/quizapp.png";
 import calendarImg from "../../assets/projects/calendar.png";
-import flightgameImg from "../../assets/projects/flightgame.png";
+// import flightgameImg from "../../assets/projects/flightgame.png";
 import rainbowLandImg from "../../assets/projects/rainbowLand.png";
 import chatALotImg from "../../assets/projects/chatAlot.png";
 import fashionStoreImg from "../../assets/projects/fashionStore.png";
+import animationLand from "../../assets/projects/animationLand.png";
 
 interface Project {
   titel?: string;
@@ -17,6 +18,13 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    titel: "Animation Land",
+    src: animationLand,
+    alt: "Alice in Animation Land",
+    demoLink: "https://aliceinanimationland.netlify.app/",
+    repoLink: "https://github.com/feliciavonbraun/Alice-in-animation-land",
+  },
   {
     // titel: 'Fashion Store',
     src: fashionStoreImg,
@@ -73,13 +81,13 @@ const projects: Project[] = [
     demoLink: "https://feliciavonbraun.github.io/calendar/",
     repoLink: "https://github.com/feliciavonbraun/calendar",
   },
-  {
-    titel: "Text Game",
-    src: flightgameImg,
-    alt: "Text Based Game",
-    demoLink: "https://feliciavonbraun.github.io/javascript-game/",
-    repoLink: "https://github.com/feliciavonbraun/javascript-game",
-  },
+  // {
+  //   titel: "Text Game",
+  //   src: flightgameImg,
+  //   alt: "Text Based Game",
+  //   demoLink: "https://feliciavonbraun.github.io/javascript-game/",
+  //   repoLink: "https://github.com/feliciavonbraun/javascript-game",
+  // },
 ];
 
 export default projects;
