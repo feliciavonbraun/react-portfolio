@@ -1,8 +1,8 @@
-import CVLink from "../../assets/feliciavonbraunCV.pdf";
-import cvImg from "../../assets/logos/cvicon.png";
-import githubLogo from "../../assets/logos/github.png";
-import linkedinLogo from "../../assets/logos/linkedin.png";
-import maillogo from "../../assets/logos/maillogo.png";
+import CVLink from "../assets/feliciavonbraunCV.pdf";
+import cvImg from "../assets/logos/cvicon.png";
+import githubLogo from "../assets/logos/github.png";
+import linkedinLogo from "../assets/logos/linkedin.png";
+import maillogo from "../assets/logos/maillogo.png";
 
 interface Circle {
   class: string;

@@ -1,7 +1,7 @@
 import { useMediaQuery } from "../mediaQuery";
 import AboutCard from "./aboutCard";
 import styled from "styled-components";
-import aboutDetails from "../content/aboutInfo";
+import aboutDetails from "../../content/aboutInfo";
 
 function About() {
   let mobileView = useMediaQuery("(max-width: 950px)");

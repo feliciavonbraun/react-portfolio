@@ -1,5 +1,5 @@
 import "../css/contact.css";
-import circles from "../content/contactDetails";
+import circles from "../../content/contactDetails";
 
 function Contact() {
   return (

@@ -1,5 +1,5 @@
 import { useMediaQuery } from "../mediaQuery";
-import projects from "../content/allProjects";
+import projects from "../../content/allProjects";
 import styled from "styled-components";
 
 function Projects() {

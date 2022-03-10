@@ -1,11 +1,11 @@
-import malta from "../../assets/photos/malta.jpeg";
-import maltaS from "../../assets/photos/maltaS.jpeg";
-import traveling from "../../assets/photos/traveling.jpeg";
-import travelingS from "../../assets/photos/travelingS.jpeg";
-import nature from "../../assets/photos/nature.jpg";
-import natureS from "../../assets/photos/natureS.jpg";
-import gadget from "../../assets/photos/gadgets.jpeg";
-import gadgetS from "../../assets/photos/gadgetsS.jpeg";
+import malta from "../assets/photos/malta.jpeg";
+import maltaS from "../assets/photos/maltaS.jpeg";
+import traveling from "../assets/photos/traveling.jpeg";
+import travelingS from "../assets/photos/travelingS.jpeg";
+import nature from "../assets/photos/nature.jpg";
+import natureS from "../assets/photos/natureS.jpg";
+import gadget from "../assets/photos/gadgets.jpeg";
+import gadgetS from "../assets/photos/gadgetsS.jpeg";
 import { CSSProperties } from "react";
 
 export interface AboutDetail {
