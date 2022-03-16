@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { AboutDetail } from "../../content/aboutInfo";
+import cursorFokus from "../../assets/cursorFocus.svg";
 
 interface Props {
   aboutDetail: AboutDetail;
@@ -21,7 +22,6 @@ export default function AboutCard(props: Props) {
           height="100%"
           style={{ borderRadius: "0.2rem" }}
         />
-        <ClickMe>CLICK ME</ClickMe>
         {isCardOpen && (
           <StyledImgTop>
             <img
@@ -38,42 +38,30 @@ export default function AboutCard(props: Props) {
   );
 }
 
-const ClickMe = styled.p`
-  visibility: hidden;
-  opacity: 0;
-  background: var(--object-clr);
-  color: var(--text-clr);
-  position: absolute;
-  padding: 0.3rem 0.5rem;
-  bottom: -0.5rem;
-  left: 70%;
-  border-radius: "0.2rem";
-`;
-
 const Wiggle = keyframes`
   0% {
-    opacity: 0 ;
+    transform: rotateZ(0);
   }
   14% {
-    opacity: 1 ; 
+    transform: rotateZ(1deg);
   } 
   15%{
     transform: rotateZ(0);
   }
   20% {
-    transform: rotateZ(-15deg);
+    transform: rotateZ(-1deg);
   }
   25% {
-    transform: rotateZ(10deg);
+    transform: rotateZ(0deg);
   }
   30% {
-    transform: rotateZ(-10deg);
+    transform: rotateZ(1deg);
   }
   35% {
-    transform: rotateZ(6deg);
+    transform: rotateZ(0);
   }
   40% {
-    transform: rotateZ(-4deg);
+    transform: rotateZ(-1deg);
   }
   50%, 100% {
     transform: rotateZ(0);
@@ -86,17 +74,14 @@ const StyledOneCard = styled.div`
   padding: 1rem;
   width: 35rem;
   position: relative;
-  cursor: pointer;
   flex-direction: column;
 
+  > img {
+    cursor: url(${cursorFokus}) 18 18, auto;
+  }
+
   :hover {
-    ${ClickMe} {
-      display: inline;
-      visibility: visible;
-      opacity: 1;
-      /* transition: opacity 0.9s ease; */
-      animation: ${Wiggle} 1s ease;
-    }
+    animation: ${Wiggle} 1s ease;
   }
 
   @media screen and (max-width: 950px) {

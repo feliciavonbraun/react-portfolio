@@ -1,13 +1,14 @@
 import { useMediaQuery } from "../mediaQuery";
 import projects from "../../content/allProjects";
 import styled from "styled-components";
+import cursorFokus from "../../assets/cursorFocus.svg";
 
 function Projects() {
   let mobileView = useMediaQuery("(max-width: 700px)");
 
   return (
     <div>
-      <StyledSmallScreenTitel id="projects">Projects</StyledSmallScreenTitel>
+      <SmallScreenTitel id="projects">Projects</SmallScreenTitel>
       <hr />
 
       <StyledProjectArea>
@@ -29,9 +30,7 @@ function Projects() {
                     rel="noreferrer"
                     style={{ textDecoration: "none" }}
                   >
-                    <StyledSmallScreenButtons>
-                      {project.titel}{" "}
-                    </StyledSmallScreenButtons>
+                    <SmallScreenButtons>{project.titel} </SmallScreenButtons>
                   </a>
                 )}
                 <a
@@ -40,11 +39,11 @@ function Projects() {
                   rel="noreferrer"
                   style={{ textDecoration: "none" }}
                 >
-                  <StyledSmallScreenButtons>Repo</StyledSmallScreenButtons>
+                  <SmallScreenButtons>Repo</SmallScreenButtons>
                 </a>
               </StyledSmallScreenButtonDiv>
             ) : (
-              <StyledDesktopHoverTitle>
+              <DesktopHoverTitle>
                 {project.demoLink && (
                   <a
                     href={project.demoLink}
@@ -52,7 +51,7 @@ function Projects() {
                     rel="noreferrer"
                     style={{ textDecoration: "none" }}
                   >
-                    <StyledProjectTitle>{project.titel} </StyledProjectTitle>
+                    <ProjectTitle>{project.titel}</ProjectTitle>
                   </a>
                 )}
                 <a
@@ -61,9 +60,9 @@ function Projects() {
                   rel="noreferrer"
                   style={{ textDecoration: "none" }}
                 >
-                  <StyledProjectTitle>Repo</StyledProjectTitle>
+                  <ProjectTitle>Repo</ProjectTitle>
                 </a>
-              </StyledDesktopHoverTitle>
+              </DesktopHoverTitle>
             )}
           </StyledProjectContainer>
         ))}
@@ -73,7 +72,7 @@ function Projects() {
 }
 export default Projects;
 
-const StyledSmallScreenTitel = styled.h2`
+const SmallScreenTitel = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +105,7 @@ const StyledComputerPicture = styled.img`
   }
 `;
 
-const StyledDesktopHoverTitle = styled.div`
+const DesktopHoverTitle = styled.div`
   top: 50%;
   left: 50%;
   position: absolute;
@@ -126,7 +125,7 @@ const StyledProjectContainer = styled.div`
     ${StyledComputerPicture} {
       opacity: 0.3;
     }
-    ${StyledDesktopHoverTitle} {
+    ${DesktopHoverTitle} {
       opacity: 1;
     }
   }
@@ -157,7 +156,7 @@ const StyledSmallScreenButtonDiv = styled.div`
   font-size: medium;
 `;
 
-const StyledSmallScreenButtons = styled.p`
+const SmallScreenButtons = styled.p`
   background: var(--object-clr);
   color: var(--bubble-clr2);
   border-radius: 0.1rem;
@@ -173,7 +172,7 @@ const StyledSmallScreenButtons = styled.p`
   }
 `;
 
-const StyledProjectTitle = styled.p`
+const ProjectTitle = styled.p`
   background: var(--object-clr);
   color: var(--text-clr);
   font-size: 16px;
@@ -184,6 +183,7 @@ const StyledProjectTitle = styled.p`
   :hover {
     text-decoration: none;
     transform: scale(1.06);
+    cursor: url(${cursorFokus}) 18 18, auto;
   }
 
   @media screen and (max-width: 950px) {
